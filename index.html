@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='myApp'>
 
 <head>
   <meta charset="utf-8">
@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="/styles/assets/crownFavicon.png">
 </head>
 
-<body>
+<body >
   <header>
     <div></div>
     <h1>Trivia Trends</h1>
@@ -26,7 +26,9 @@
     <div class="search">
       <input type="text" placeholder="Animal to search by">
     </div>
-
+    <div >
+    </div>
+    <quest-Comp></quest-Comp>
     <!-- Questions go here -->
 
   </article>
@@ -34,30 +36,30 @@
   <div class="modal">
     <form>
       <h4 class="close">X</h4>
-      <span>Question</span><input type="text" ng-model="<!-- Question -->">
-      <span>Animal it's about</span><input type="text" ng-model="<!-- Animal -->">
+      <span>Question</span><input type="text" > <!--ng-model=" Question -->
+      <span>Animal it's about</span><input type="text"> <!--ng-model=" Animal -->
       <span>Difficulty</span>
       <div class="range">
-        <input type="range" min="1" max="3" ng-model="<!-- Difficulty -->">
+        <input type="range" min="1" max="3"><!-- ng-model=" Difficulty -->
 
         <h5>{{newQuestion.difficulty}}</h5>
       </div>
       <h4>Options</h4>
       <div>
-        <input type="radio" ng-model="" value="1">
-        <input type="text" ng-model="">
+        <input type="radio" value="1"> <!-- needs an ng-model-->
+        <input type="text" ><!-- needs an ng-model-->
       </div>
       <div>
-        <input type="radio" ng-model="" value="2">
-        <input type="text" ng-model="">
+        <input type="radio" value="2"><!-- needs an ng-model-->
+        <input type="text" ><!-- needs an ng-model-->
       </div>
       <div>
-        <input type="radio" ng-model="" value="3">
-        <input type="text" ng-model="">
+        <input type="radio" value="3"><!-- needs an ng-model-->
+        <input type="text" ><!-- needs an ng-model-->
       </div>
       <div>
-        <input type="radio" ng-model="" value="4">
-        <input type="text" ng-model="">
+        <input type="radio"  value="4"><!-- needs an ng-model-->
+        <input type="text" ><!-- needs an ng-model-->
       </div>
 
       <!--Add question buttons-->
@@ -80,8 +82,13 @@
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" charset="utf-8"></script>
-  <script src="./app.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js" charset="utf-8"></script>
+ 
+  <script src="app/app.js" charset="utf-8"></script>
+  <script src='app/service.js'></script>
+  <script src='app/components/questions.js'></script>
+  <script src='app/controller.js'></script>
 </body>
 
 </html>
