@@ -2,7 +2,7 @@ angular.module('myApp').service('srvc', function($http, $q) {
     
     this.things = 'whateva!!!';
     this.getApi = function(){
-        $http.get('https://practiceapi.devmountain.com/').then(resp => {//SIM 4 52D
+        return $http.get('https://practiceapi.devmountain.com/').then(resp => {//SIM 4 52D
             return resp.data;
         });
     }
